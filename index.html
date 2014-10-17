@@ -25,6 +25,19 @@
   <body>
     <div class="reveal">
       <div class="slides">
+	<section id="intro"
+		 data-markdown="markdown/intro.md"
+		 data-separator="^\n\n\n"
+		 data-vertical="^\n\n"
+		 data-notes="^Note:" >
+	</section>
+	<section id="benchmarking"
+		 data-markdown="markdown/benchmark.md"
+		 data-separator="^\n\n\n"
+		 data-vertical="^\n\n"
+		 data-notes="^Note:" >
+	</section>
+
       </div>
     </div>
 
@@ -61,16 +74,16 @@ for (var i = 0; i < n; i++) {
 // Full list of configuration options available here:
 // https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
-    controls: true,
-    progress: true,
+    controls: false,
+    progress: false,
     history: true,
     center: true,
 
     // Parallax background image
-    parallaxBackgroundImage: 'images/background.jpg',
+    parallaxBackgroundImage: 'images/background.svg',
 
     // Parallax background size
-    parallaxBackgroundSize: '2100px 900px', // CSS syntax, e.g. "2100px 900px"
+    parallaxBackgroundSize: '2000px 2000px', // CSS syntax, e.g. "2100px 900px"
 
     theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
     transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
