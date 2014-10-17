@@ -33,3 +33,16 @@ fio --size=100m \
 ```sh
 netperf  -t TCP_STREAM -H 127.0.0.1
 ```
+
+
+## OSD benchmark
+```sh
+ceph tell osd.X bench
+```
+
+
+## rados benchmark
+```sh
+rados bench -p bench 30 write
+```
+Do this on a throwaway pool!
