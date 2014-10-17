@@ -29,7 +29,7 @@ fio --size=100m \
 ```
 
 
-<iframe src="https://asciinema.org/api/asciicasts/13037?size=medium&amp;theme=solarized-light&amp;autoplay=1" id="asciicast-iframe-13037" name="asciicast-iframe-13037" scrolling="no"></iframe>
+<iframe src="https://asciinema.org/api/asciicasts/13037?size=medium&amp;theme=solarized-light" id="asciicast-iframe-13037" name="asciicast-iframe-13037" scrolling="no"></iframe>
 
 
 
