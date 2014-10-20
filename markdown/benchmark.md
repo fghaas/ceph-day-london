@@ -14,6 +14,9 @@ dd if=/dev/zero of=/dev/sdh1 bs=512 count=1000 oflag=direct
 ```
 
 
+<iframe src="https://asciinema.org/api/asciicasts/13104?size=medium&amp;theme=solarized-light&amp;speed=2" id="asciicast-iframe-13104" name="asciicast-iframe-13104" scrolling="yes"></iframe>
+
+
 ## Block device benchmarks
 (advanced)
 ```sh
@@ -29,8 +32,7 @@ fio --size=100m \
 ```
 
 
-<iframe src="https://asciinema.org/api/asciicasts/13037?size=medium&amp;theme=solarized-light" id="asciicast-iframe-13037" name="asciicast-iframe-13037" scrolling="no"></iframe>
-
+<iframe src="https://asciinema.org/api/asciicasts/13105?size=medium&amp;theme=solarized-light&amp;speed=2" id="asciicast-iframe-13105" name="asciicast-iframe-13105" scrolling="yes"></iframe>
 
 
 ## Network benchmarks
@@ -45,8 +47,39 @@ ceph tell osd.X bench
 ```
 
 
+<iframe src="https://asciinema.org/api/asciicasts/13106?size=medium&amp;theme=solarized-light&amp;speed=2" id="asciicast-iframe-13106" name="asciicast-iframe-13106" scrolling="yes"></iframe>
+
+
 ## rados benchmark
 ```sh
 rados bench -p bench 30 write
 ```
 Do this on a throwaway pool!
+
+
+<iframe src="https://asciinema.org/api/asciicasts/13107?size=medium&amp;theme=solarized-light&amp;speed=2" id="asciicast-iframe-13107" name="asciicast-iframe-13107" scrolling="yes"></iframe>
+
+
+## fio RBD benchmarks
+```sh
+fio --size=10G \
+	--ioengine=librbd \
+	--invalidate=0 \
+	--direct=1 \
+	--numjobs=10 \
+	--rw=write \
+	--name=fiojob \
+	--blocksize_range=4K-512k \
+	--iodepth=1 \
+	--pool=bench \
+	--rbdname=fio-test
+```
+
+
+<iframe src="https://asciinema.org/api/asciicasts/13119?size=medium&amp;theme=solarized-light&amp;speed=2" id="asciicast-iframe-13119" name="asciicast-iframe-13119" scrolling="yes"></iframe>
+
+
+## Mind the cache!
+
+
+<iframe src="https://asciinema.org/api/asciicasts/13118?size=medium&amp;theme=solarized-light&amp;speed=2" id="asciicast-iframe-13118" name="asciicast-iframe-13118" scrolling="yes"></iframe>
