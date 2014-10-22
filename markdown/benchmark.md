@@ -37,7 +37,7 @@ fio --size=100m \
 
 ## Network benchmarks
 ```sh
-netperf  -t TCP_STREAM -H 127.0.0.1
+netperf -t TCP_STREAM -H <host>
 ```
 
 
